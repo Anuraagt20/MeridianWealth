@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>
+        {% block title %}
+        Meridian Wealth AI
+        {% endblock %}
+    </title>
+
+    <link rel="stylesheet"
+          href="{{ request.url_for('static', path='/css/style.css') }}">
+
+</head>
+
+<body>
+
+<div class="app-shell">
+
+    <aside class="sidebar">
+
+        <div class="brand">
+
+            <h2>Meridian Wealth</h2>
+
+            <span>
+                Financial Analyst AI
+            </span>
+
+        </div>
+
+        <nav>
+
+            <div class="nav-section">
+
+                <h4>Quick Actions</h4>
+
+                <button class="quick-action"
+                        data-query="Prepare a quarterly briefing for client CLT-001">
+                    Quarterly Briefing
+                </button>
+
+                <button class="quick-action"
+                        data-query="Perform a policy compliance review for client CLT-001">
+                    Policy Review
+                </button>
+
+                <button class="quick-action"
+                        data-query="Perform a portfolio risk assessment for client CLT-001">
+                    Risk Assessment
+                </button>
+
+                <button class="quick-action"
+                        data-query="Provide market outlook for Technology sector">
+                    Market Outlook
+                </button>
+
+            </div>
+
+        </nav>
+
+    </aside>
+
+    <main class="main-content">
+
+        <header class="topbar">
+
+            <div>
+
+                <h1>
+                    Financial Analyst Agent
+                </h1>
+
+                <p>
+                    Portfolio Analysis • Market Intelligence • Policy Review
+                </p>
+
+            </div>
+
+            <div class="status-bar">
+
+                <span class="status-pill success">
+                    GPT-4o-mini
+                </span>
+
+                <span class="status-pill success">
+                    SQLite
+                </span>
+
+                <span class="status-pill success">
+                    FAISS
+                </span>
+
+            </div>
+
+        </header>
+
+        {% block content %}
+        {% endblock %}
+
+    </main>
+
+</div>
+
+<script src="{{ request.url_for('static', path='/js/app.js') }}"></script>
+
+</body>
+
+</html>

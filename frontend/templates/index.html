@@ -1,0 +1,101 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="dashboard">
+
+    <div class="input-panel">
+
+        <div class="card">
+
+            <div class="card-header">
+
+                <h2>
+                    Analysis Request
+                </h2>
+
+            </div>
+
+            <textarea
+                id="query"
+                rows="12"
+                placeholder="Enter analysis request..."
+            ></textarea>
+
+            <div class="button-row">
+
+                <button id="submitBtn"
+                        class="primary-btn">
+
+                    Analyze
+
+                </button>
+
+                <button id="clearBtn"
+                        class="secondary-btn">
+
+                    Clear
+
+                </button>
+
+            </div>
+
+        </div>
+
+        <div class="card">
+
+            <h2>
+                Agent Information
+            </h2>
+
+            <div id="agentInfo">
+                Loading...
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="response-panel">
+
+        <div class="card response-card">
+
+            <div class="response-toolbar">
+
+                <h2>
+                    Analysis Report
+                </h2>
+
+                <button id="copyBtn"
+                        class="copy-btn">
+
+                    Copy
+
+                </button>
+
+            </div>
+
+            <div id="loading"
+                 class="loading hidden">
+
+                <div class="spinner"></div>
+
+                <span>
+                    Generating financial analysis...
+                </span>
+
+            </div>
+
+            <div id="response">
+
+                Ready for analysis.
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+{% endblock %}
